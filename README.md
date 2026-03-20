@@ -1,2 +1,2 @@
-# Heritage and Culuture
-Web site on Heritage and Culuture
+# Heritage and Culture
+Web site on Heritage and Culture
