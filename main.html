@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heritages And Culture</title>
+  <style>
+    /* page2.css - styles for the gallery page */
+:root{
+  --bg: #f9ddb2;
+  --card-bg: #ffffff;
+  --muted: #666;
+  --accent: #0b74de;
+  --gap: 20px;
+  --radius: 12px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, Roboto, Arial, sans-serif;background:var(--bg);color:#222}
+.gallery-page{
+  min-height:100vh;
+  padding:40px 16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Title */
+.title{
+  margin:0 0 20px 0;
+  font-size:28px;
+  letter-spacing:0.2px;
+}
+
+/* Grid layout for 4 items */
+.grid{
+  width:100%;
+  max-width:1100px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:var(--gap);
+  align-items:start;
+}
+
+/* Card */
+.card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  padding:10px;
+  box-shadow: 0 6px 18px rgba(22,28,37,0.06);
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  transition:transform .18s ease, box-shadow .18s ease;
+  overflow:hidden;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow: 0 12px 30px rgba(22,28,37,0.12);
+}
+
+/* Image responsivity and cropping */
+.card-img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+}
+
+/* Links container */
+.card-links{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  justify-content:flex-start;
+  align-items:center;
+  padding:0 4px 8px 4px;
+}
+
+/* Link styles */
+.card-links a{
+  text-decoration:none;
+  font-size:14px;
+  padding:8px 10px;
+  border-radius:8px;
+  transition:background .12s ease, transform .12s ease;
+  display:inline-block;
+}
+
+/* Wikipedia link */
+.card-links .wiki{
+  color:var(--card-bg);
+  background:var(--accent);
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.06);
+}
+
+.card-links .wiki:hover{ transform:translateY(-2px); }
+
+/* Audio link style */
+.card-links .audio{
+  color:var(--accent);
+  background:transparent;
+  border:1px solid rgba(11,116,222,0.2);
+}
+
+.card-links .audio:hover{
+  background:rgba(11,116,222,0.06);
+  transform:translateY(-2px);
+}
+
+/* Footer/back link */
+.footer{ margin-top:28px; }
+.back{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+}
+.back:hover{ text-decoration:underline; }
+
+/* Responsive adjustments */
+@media (max-width:1000px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+  .card-img{ height:180px; }
+}
+@media (max-width:520px){
+  .grid{ grid-template-columns: 1fr; gap:12px; }
+  .card-img{ height:220px; }
+  .gallery-page{ padding:20px 12px; }
+}
+  </style>
+</head>
+<body>
+  <main class="gallery-page">
+    <h1 class="title">Heritages And Culture</h1>
+    <h2>Jay Maharashtra</h2>
+
+    <section class="grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <img src="images/hycc.jpg" alt="Image 1" class="card-img">
+         <h5>Tuljapur Temple</h5>
+        <div class="card-links">
+          <a class="wiki" href="https://mr.wikipedia.org/wiki/%E0%A4%A4%E0%A5%81%E0%A4%B3%E0%A4%9C%E0%A4%BE%E0%A4%AA%E0%A5%82%E0%A4%B0" target="_blank" rel="noopener">Information</a>
+          <a class="audio" href="audio/Tuljapur.mp4" target="_blank" rel="noopener">Story</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="images/hcc.jpg" alt="Image 2" class="card-img">
+        <h5>Gokarn Mahadev Temple</h5>
+        <div class="card-links">
+          <a class="wiki" href="https://en.wikipedia.org/wiki/Mahabaleshwar_Temple,_Gokarna" target="_blank" rel="noopener">Information</a>
+          <a class="audio" href="audio/Gokarn.mp4" target="_blank" rel="noopener">Story</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <img src="images/hyccy.jpg" alt="Image 3" class="card-img">
+         <h5>Anadhhipti</h5>
+        <div class="card-links">
+          <a class="wiki" href="https://mr.wikipedia.org/wiki/%E0%A4%97%E0%A4%A3%E0%A4%AA%E0%A4%A4%E0%A5%80" target="_blank" rel="noopener">Infromation</a>
+          <a class="audio" href="Audio/Ganadhipati.mp4" target="_blank" rel="noopener">Story</a>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <img src="images/hyy.jpg" alt="Image 4" class="card-img">
+        <h5>Agmer Dargaa</h5>
+        <div class="card-links">
+          <a class="wiki" href="https://mr.wikipedia.org/wiki/%E0%A4%96%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%9C%E0%A4%BE_%E0%A4%97%E0%A4%B0%E0%A5%80%E0%A4%AC_%E0%A4%A8%E0%A4%B5%E0%A4%BE%E0%A4%9C#%E0%A4%9A%E0%A4%BF%E0%A4%B6%E0%A4%BF%E0%A4%AF%E0%A4%BE_%E0%A4%AA%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%A4_-_%E0%A4%9C%E0%A5%80%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A5%8B%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%BE%E0%A4%B0" target="_blank" rel="noopener">Wikipedia</a>
+          <a class="audio" href="audio/Ajmer.mp4" target="_blank" rel="noopener">Story</a>
+        </div>
+      </article>
+
+
+      <article class="card">
+        <img src="images/sss.jpg" alt="Image 4" class="card-img">
+        <h5>Salher Fort</h5>
+        <div class="card-links">
+          <a class="wiki" href="https://mr.wikipedia.org/wiki/%E0%A4%B8%E0%A4%BE%E0%A4%B2%E0%A5%8D%E0%A4%B9%E0%A5%87%E0%A4%B0" target="_blank" rel="noopener">Wikipedia</a>
+          <a class="audio" href="audio/Salher.mp4" target="_blank" rel="noopener">Story</a>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <a href="index.html" class="back">← Back to first page</a>
+    </footer>
+  </main>
+</body>
+</html>
